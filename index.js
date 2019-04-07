@@ -75,6 +75,11 @@ app.get('/', (req, res) => {
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align:center;
+        }
+
+        a {
+            color: black;
         }
 
 
@@ -88,10 +93,13 @@ app.get('/', (req, res) => {
         </h1>
         
         <p>
-            Hay un error con el enlace seleccionado:
+            ¡Lo sentimos!
+        </p>
+        <p>
+            Hay un problema con el enlace seleccionado:
         </p>
 
-        <a href="#">enlaceoriginal</a>
+        <a href="#">${url}</a>
 
     </section>
 </body>
