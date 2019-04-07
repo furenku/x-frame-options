@@ -86,7 +86,7 @@ app.get('/', (req, res) => {
 
 
         html, body {
-            font-family: ()
+            font-family: 'Suisse', sans-serif;
             margin: 0;
             padding: 0;
             width: 100%;
