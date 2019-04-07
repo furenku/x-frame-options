@@ -21,6 +21,9 @@ const getMimeType = url => {
 
 app.get('/', (req, res) => {
     const { url } = req.query; // get url parameter
+
+//console.log( url );
+
     if(!url) {
         res.type('text/html');
         return res.end("You need to specify <code>url</code> query parameter");
@@ -46,8 +49,13 @@ app.get('/', (req, res) => {
             res.type(urlMime);
             res.send(data);
         }).catch(error => {
-        console.log(error);
-    });
+        	
+		console.log("error");
+
+		res.type('text/html');
+        	return res.end("Error 404. El link está roto");
+
+    	});
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
