@@ -122,7 +122,7 @@ app.get('/', (req, res) => {
             Hay un problema con el enlace seleccionado:
         </p>
 
-        <a href="#">${url}</a>
+        <a href="${url}" target="_blank">${url}</a>
 
     </section>
 </body>
