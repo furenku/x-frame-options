@@ -73,14 +73,14 @@ app.get('/', (req, res) => {
             font-family: 'Suisse';
             font-style: normal;
             font-weight: normal;
-            src: url('./fonts/SuisseIntl-Regular.otf');
+            src: url('fonts/SuisseIntl-Regular.otf');
         }
 
         @font-face {
             font-family: 'Suisse';
             font-style: bold;
             font-weight: 800;
-            src: url('./fonts/SuisseIntl-Medium.otf');
+            src: url('fonts/SuisseIntl-Medium.otf');
         }
 
 
@@ -89,8 +89,8 @@ app.get('/', (req, res) => {
             font-family: ()
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
