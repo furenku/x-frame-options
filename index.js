@@ -67,7 +67,26 @@ app.get('/', (req, res) => {
     <title>Document</title>
 
     <style>
+
+
+        @font-face {
+            font-family: 'Suisse';
+            font-style: normal;
+            font-weight: normal;
+            src: url('./fonts/SuisseIntl-Regular.otf');
+        }
+
+        @font-face {
+            font-family: 'Suisse';
+            font-style: bold;
+            font-weight: 800;
+            src: url('./fonts/SuisseIntl-Medium.otf');
+        }
+
+
+
         html, body {
+            font-family: ()
             margin: 0;
             padding: 0;
             width: 100vw;
@@ -80,6 +99,10 @@ app.get('/', (req, res) => {
 
         a {
             color: black;
+        }
+
+        * {
+            font-family: 'Suisse', sans-serif;
         }
 
 
