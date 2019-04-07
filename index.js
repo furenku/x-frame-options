@@ -73,14 +73,14 @@ app.get('/', (req, res) => {
             font-family: 'Suisse';
             font-style: normal;
             font-weight: normal;
-            src: url('http://andamiaje.co/static/media/SuisseIntl-Regular.db0a4a5d.otf');
+            src: url('http://192.241.194.153:8080/fonts/SuisseIntl-Regular.db0a4a5d.otf');
         }
 
         @font-face {
             font-family: 'Suisse';
             font-style: bold;
             font-weight: 800;
-            src: url('http://andamiaje.co/static/media/SuisseIntl-Medium.db0a4a5d.otf');
+            src: url('http://192.241.194.153:8080/fonts/SuisseIntl-Medium.db0a4a5d.otf');
         }
 
 
