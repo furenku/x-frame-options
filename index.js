@@ -31,20 +31,24 @@ app.get('/', (req, res) => {
 
     axios.get(url, { responseType: 'arraybuffer'  }) // set response type array buffer to access raw data
         .then(({ data }) => {
+
+            console.log(data);
+            
+
             const urlMime = getMimeType(url); // get mime type of the requested url
             if(urlMime === 'text/html') { // replace links only in html
-                data = data.toString().replace(regex, (match, p1, p2)=>{
-                    let newUrl = '';
-                    if(p2.indexOf('http') !== -1) {
-                        newUrl = p2;
-                    } else if (p2.substr(0,2) === '//') {
-                        newUrl = 'http:' + p2;
-                    } else {
-                        const searchURL = new URL(url);
-                        newUrl = searchURL.protocol + '//' + searchURL.host + p2;
-                    }
-                    return ` ${p1}="${req.protocol}://${req.hostname}?url=${newUrl}"`;
-                });
+                // data = data.toString().replace(regex, (match, p1, p2)=>{
+                //     let newUrl = '';
+                //     if(p2.indexOf('http') !== -1) {
+                //         newUrl = p2;
+                //     } else if (p2.substr(0,2) === '//') {
+                //         newUrl = 'http:' + p2;
+                //     } else {
+                //         const searchURL = new URL(url);
+                //         newUrl = searchURL.protocol + '//' + searchURL.host + p2;
+                //     }
+                //     return ` ${p1}="${req.protocol}://${req.hostname}?url=${newUrl}"`;
+                // });
             }
             res.type(urlMime);
             res.send(data);
