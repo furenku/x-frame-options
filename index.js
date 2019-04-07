@@ -57,7 +57,46 @@ app.get('/', (req, res) => {
 		console.log("error");
 
 		res.type('text/html');
-        	return res.end("Error 404. El link está roto");
+            return res.end(`
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        html, body, {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="ErrorNotice">
+        <h1>
+            Error 404.    
+        </h1>
+        
+        <p>
+            Hay un error con el enlace seleccionado:
+        </p>
+
+        <a href="#">enlaceoriginal</a>
+
+    </section>
+</body>
+</html>
+`);
 
     	});
 });
